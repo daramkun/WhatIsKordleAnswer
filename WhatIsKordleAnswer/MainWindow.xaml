@@ -1,0 +1,63 @@
+﻿<Window x:Class="WhatIsKordleAnswer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WhatIsKordleAnswer"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="16" />
+            <RowDefinition Height="24" />
+            <RowDefinition Height="16" />
+            <RowDefinition Height="24" />
+            <RowDefinition Height="24" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        
+        <TextBlock Grid.Row="0" Text="자리가 확정된 단어:" />
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            
+            <ComboBox x:Name="ComboBoxSpecificChar1" Grid.Column="0" />
+            <ComboBox x:Name="ComboBoxSpecificChar2" Grid.Column="1" />
+            <ComboBox x:Name="ComboBoxSpecificChar3" Grid.Column="2" />
+            <ComboBox x:Name="ComboBoxSpecificChar4" Grid.Column="3" />
+            <ComboBox x:Name="ComboBoxSpecificChar5" Grid.Column="4" />
+            <ComboBox x:Name="ComboBoxSpecificChar6" Grid.Column="5" />
+        </Grid>
+        
+        <TextBlock Grid.Row="2" Text="정확한 자리는 모르는 단어:" />
+        <Grid Grid.Row="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            
+            <ComboBox x:Name="ComboBoxExistChar1" Grid.Column="0" />
+            <ComboBox x:Name="ComboBoxExistChar2" Grid.Column="1" />
+            <ComboBox x:Name="ComboBoxExistChar3" Grid.Column="2" />
+            <ComboBox x:Name="ComboBoxExistChar4" Grid.Column="3" />
+            <ComboBox x:Name="ComboBoxExistChar5" Grid.Column="4" />
+            <ComboBox x:Name="ComboBoxExistChar6" Grid.Column="5" />
+        </Grid>
+        
+        <Button Grid.Row="4" Content="찾아보기" Click="ButtonFindAnswer_OnClick" />
+        
+        <ListBox x:Name="ListBoxResult" Grid.Row="5" VerticalAlignment="Stretch">
+            
+        </ListBox>
+    </Grid>
+</Window>
